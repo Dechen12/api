@@ -27,5 +27,3 @@ class Student(models.Model):
     def __str__(self):
         return self.Year
 
-class profile(models.Model):
-    name=models.CharField(max_length=200)

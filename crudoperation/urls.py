@@ -21,5 +21,5 @@ urlpatterns = [
     path('api/students/', StudentList.as_view()), 
     path('api/students/<int:pk>/', StudentDetail.as_view()),
     path('admin/', admin.site.urls),
-    #path('profile/', views.profiles.as_view()),
+
 ]
