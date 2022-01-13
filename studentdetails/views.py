@@ -5,7 +5,7 @@ from .models import Student
 from .serializers import StudentSerializer
 from rest_framework.views import APIView
 from rest_framework.response import  Response
-
+from studentdetails.pagination import CustomPageNumberPagination
 #Create your views here.
 
 
