@@ -27,9 +27,9 @@ SECRET_KEY = 'django-insecure-9h)f*aj)q!%&w13u0=_w6v+$ca6*#s%tgr!59l)9b30-6=)-z!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
-#CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_ALLOW_ALL = True
 
 REST_FRAMEWORK = {
     #'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
@@ -54,7 +54,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'studentdetails',
     'rest_framework',
-    #'corsheaders',
+    'corsheaders',
 
 ]
 
@@ -66,8 +66,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    #'whitenoise.middleware.WhiteNoiseMiddleware',
-    #'corsheaders.middleware.CorsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 
 ROOT_URLCONF = 'crudoperation.urls'
